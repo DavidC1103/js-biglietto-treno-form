@@ -1,15 +1,14 @@
 const kmPrice = 0.21;
 
 const nameUser = document.getElementById('name')
-console.log('name', name);
 
 const kmUser = document.getElementById('km')
-console.log('km', km);
 
 const button1 = document.getElementById('button1')
 
 const button2 = document.getElementById('button2')
 
+const ticket = document.querySelector('.ticket');
 
 
 
@@ -17,32 +16,56 @@ const button2 = document.getElementById('button2')
 
 
 button1.addEventListener('click', function(){
+
+    
+    let name2 = document.getElementById('name2');
+    name2 = nameUser.value;
+    output.innerHTML = name2
+    nameUser.value = "";
+
+
+    const disc = document.getElementById('disc')
+  
+    
+    
+    
+    
+    
     
     let age = document.getElementById('age')
-    console.warn('age', age.value);
-
+    
     name = nameUser.value;
-    console.log('nomeutente', name);
     
     km = kmUser.value; 
-    console.log('km utente', km);
     
     let standardPrice =  kmPrice * km;
-    console.log('prezzo standard', standardPrice);
     
     let discountPrice = standardPrice;
     
     if(age.value == 'minorenne'){
         discountPrice -= standardPrice * 20 / 100;
-        console.log('discountPrice', discountPrice);
+        ticket.classList.remove('hide');
+
     }else if(age.value == 'over65'){
         discountPrice -= standardPrice * 40 / 100;
-        console.log('discountPrice', discountPrice);
-    }
+        ticket.classList.remove('hide');
+
+    }else if(age.value == 'maggiorenne')
+    discountPrice = standardPrice;
+    ticket.classList.remove('hide');
 });
 
 
 
+
+
+button2.addEventListener('click', function(){
+    
+    if(ticket){
+        ticket.classList.add('hide')
+    }
+})
+ 
 
 
 

@@ -5,42 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Ticket</title>
 </head>
 <body class="bg-success text-white">
 
-        <main class="text-center">
-            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <main>
+            <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             <div class="container">
                 <div class=" row rounded shadow my-5 bg-white g-5">
-                    <div class="col-4">
+                    <div class="col-4 text-center">
                         <div>
-                            <label for="name" class="text-black text-center">NOME</label>
+                            <label for="name" class="text-success text-center pb-4 fw-bold">NOME</label>
                         </div>
-                        <input type="text" id="name" value="" placeholder="Es. Mario" class="border border-2 border-danger">
+                        <input type="text" id="name" value="" placeholder="Es. Mario" class="border border-2 border-danger rounded shadow py-2 px-1 text-center fw-bold">
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 text-center">
                         <div>
-                            <label for="km" class="text-center text-black">KK DA PERCORRERE</label>
+                            <label for="km" class="text-success text-center pb-4 fw-bold">KK DA PERCORRERE</label>
                         </div>
-                        <input type="text" id="km" value="" placeholder="Es. 1000" class="border border-2 border-danger">
+                        <input type="text" id="km" value="" placeholder="Es. 1000" class="border border-2 border-danger rounded shadow py-2 px-1 text-center fw-bold">
                     </div>
-                    <div class="col-4">
-                        <div class="text-black">
+                    <div class="col-4 text-center">
+                        <div class="text-success pb-4 fw-bold">
                             <span>Fascia di età</span>
                         </div>
-                        <select name="fasciaDiEta" id="age">
+                        <select name="fasciaDiEta" id="age" class="px-4 py-2 bg-white border-danger shadow fw-bold">
                             <option value="minorenne">Minorenne</option>
                             <option value="maggiorenne">Maggiorenne</option>
                             <option value="over65">Over 65</option>
                         </select>
                     </div>
-                    <div class="col-12 pb-5 pt-3">
-                        <button id="button1">Invia</button>
-                        <button id="button2">Cancella</button>
+                    <div class="col-12 pb-5 pt-3 text-center">
+                        <button id="button1" class="px-5 py-2 fw-bold border-warning shadow bg-secondary">Genera</button>
+                        <button id="button2" class="px-5 py-2 fw-bold border-dark bg-secondary">Annulla</button>
                     </div>
                 </div>
-                <h1>IL TUO BIGLIETTO</h1>
+            </div>
+            <div class="container">
+                <h1 class="text-center">IL TUO BIGLIETTO</h1>
+                <div class="card p-5 shadow ticket hide">
+                    <h2 class="text-black">DETTAGLIO PASSEGGERI</h2>
+                    <table class="table bg-white pt-2 border text-black">
+                        <thead class="border">
+                            <tr>
+                                <th scope="col" class="fw-bold bg-secondary">NOME PASSEGGERO</th>
+                                <th scope="col" class="fw-bold">Offerta</th>
+                                <th scope="col" class="fw-bold">Carrozza</th>
+                                <th scope="col" class="fw-bold">Codice CP</th>
+                                <th scope="col" class="fw-bold">Costo Biglietto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="p-4" id="name2" value=""><span id="output"></span></th>
+                                <td class="p-4" id="disc"><span id="discApply"></span></td>
+                                <td class="p-4" id="carrozza"></td>
+                                <td class="p-4" id="code"></td>
+                                <td class="p-4" id="priceTicket"></td>
+                            </tr>
+                        </tbody>
+                    </table>   
+                  </div>
             </div>
         </main>
  
@@ -49,3 +75,5 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
