@@ -14,12 +14,21 @@
             <div class="container">
                 <div class=" row rounded shadow my-5 bg-white g-5">
                     <div class="col-4">
-                        <input type="text" id="name" value="" placeholder="Nome">
+                        <div>
+                            <label for="name" class="text-black text-center">NOME</label>
+                        </div>
+                        <input type="text" id="name" value="" placeholder="Es. Mario" class="border border-2 border-danger">
                     </div>
                     <div class="col-4">
-                        <input type="text" id="km" value="">
+                        <div>
+                            <label for="km" class="text-center text-black">KK DA PERCORRERE</label>
+                        </div>
+                        <input type="text" id="km" value="" placeholder="Es. 1000" class="border border-2 border-danger">
                     </div>
                     <div class="col-4">
+                        <div class="text-black">
+                            <span>Fascia di età</span>
+                        </div>
                         <select name="fasciaDiEta" id="age">
                             <option value="minorenne">Minorenne</option>
                             <option value="maggiorenne">Maggiorenne</option>

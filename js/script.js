@@ -33,7 +33,7 @@ button1.addEventListener('click', function(){
     let discountPrice = standardPrice;
     
     if(age.value == 'minorenne'){
-        discountPrice -= (standardPrice * 20 / 100);
+        discountPrice -= standardPrice * 20 / 100;
         console.log('discountPrice', discountPrice);
     }else if(age.value == 'over65'){
         discountPrice -= standardPrice * 40 / 100;
